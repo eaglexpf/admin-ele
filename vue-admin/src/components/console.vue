@@ -1,12 +1,10 @@
 <template>
-    <el-main>
-        <router-view></router-view>
-    </el-main>
+    <div>this is console</div>
 </template>
 
 <script>
     export default {
-        name: "xmain"
+        name: "console"
     }
 </script>
 

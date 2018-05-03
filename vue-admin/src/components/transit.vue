@@ -1,12 +1,10 @@
 <template>
-    <el-main>
-        <router-view></router-view>
-    </el-main>
+    <router-view></router-view>
 </template>
 
 <script>
     export default {
-        name: "xmain"
+        name: "transit"
     }
 </script>
 

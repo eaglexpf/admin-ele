@@ -44,9 +44,9 @@
                 active_children_id:0,
                 menu:[
                     {id:1,name:"博客管理",icon:"",url:"",children:[
-                            {id:10,name:"网站管理",icon:"",url:"/admin/blog/user"},
-                            {id:11,name:"文章管理",icon:"",url:"/admin/powers/user"},
-                            {id:12,name:"分类管理",icon:"",url:"/admin/powers/role"},
+                            {id:10,name:"网站管理",icon:"",url:"/admin/blog"},
+                            {id:11,name:"文章管理",icon:"",url:"/admin/blog/article"},
+                            {id:12,name:"分类管理",icon:"",url:"/admin/blog/role"},
                             {id:13,name:"页面管理",icon:"",url:"/admin/powers/menu"},
                             {id:14,name:"素材管理",icon:"",url:"/admin/powers/router"},
                             {id:15,name:"菜单管理",icon:"",url:"/admin/powers/router"}
