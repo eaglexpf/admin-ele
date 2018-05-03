@@ -3,9 +3,12 @@
 </template>
 
 <script>
-export default {
-    name: 'App'
-}
+    export default {
+        name: 'App',
+        created(){
+
+        }
+    }
 </script>
 
 <style>
