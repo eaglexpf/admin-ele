@@ -10,6 +10,7 @@ import blog_console from '@/components/blog/console'
 import blog_article from '@/components/blog/article'
 import blog_category from '@/components/blog/category'
 import blog_menu from '@/components/blog/menu'
+import blog_upload from '@/components/blog/upload'
 
 Vue.use(Router)
 
@@ -46,6 +47,10 @@ export default new Router({
                         {
                             path:'menu',
                             component:blog_menu
+                        },
+                        {
+                            path:'upload',
+                            component:blog_upload
                         }
                     ]
                 }
