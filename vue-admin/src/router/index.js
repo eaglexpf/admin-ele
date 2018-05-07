@@ -8,6 +8,8 @@ import transit from '@/components/transit'
 
 import blog_console from '@/components/blog/console'
 import blog_article from '@/components/blog/article'
+import blog_category from '@/components/blog/category'
+import blog_menu from '@/components/blog/menu'
 
 Vue.use(Router)
 
@@ -36,6 +38,14 @@ export default new Router({
                         {
                             path:'article',
                             component:blog_article
+                        },
+                        {
+                            path:'category',
+                            component:blog_category
+                        },
+                        {
+                            path:'menu',
+                            component:blog_menu
                         }
                     ]
                 }

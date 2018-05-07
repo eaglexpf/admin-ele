@@ -1,5 +1,5 @@
-<template xmlns="http://www.w3.org/1999/html">
-    <el-aside v-bind:width="collapse?'50px':'220px'" v-bind:class="collapse?'sidebar_collapse':''">
+<template >
+    <el-aside v-bind:width="collapse?'50px':'220px'" v-bind:class="[collapse?'sidebar_collapse':'','page_left']">
         <el-header height="50px" @click.native="goHome">{{collapse?'APP':'系统管理'}}</el-header>
         <el-main>
             <div class="user-panel">
@@ -46,10 +46,10 @@
                     {id:1,name:"博客管理",icon:"",url:"",children:[
                             {id:10,name:"网站管理",icon:"",url:"/admin/blog"},
                             {id:11,name:"文章管理",icon:"",url:"/admin/blog/article"},
-                            {id:12,name:"分类管理",icon:"",url:"/admin/blog/role"},
-                            {id:13,name:"页面管理",icon:"",url:"/admin/powers/menu"},
-                            {id:14,name:"素材管理",icon:"",url:"/admin/powers/router"},
-                            {id:15,name:"菜单管理",icon:"",url:"/admin/powers/router"}
+                            {id:12,name:"分类管理",icon:"",url:"/admin/blog/category"},
+                            {id:13,name:"页面管理",icon:"",url:"/admin/blog/page"},
+                            {id:14,name:"素材管理",icon:"",url:"/admin/blog/upload"},
+                            {id:15,name:"菜单管理",icon:"",url:"/admin/blog/menu"}
                         ]},
                     {id:3,name:"权限管理",icon:"",url:"",children:[
                             {id:31,name:"用户管理",icon:"",url:"/admin/system/user"},
@@ -108,12 +108,20 @@
                 this.active_children_id = id;
             },
             mouseenter:function () {
+                var collapse = document.getElementsByClassName('sidebar_collapse');
+                if (!collapse.length){
+                    return false;
+                }
                 var h = document.documentElement.scrollHeight || document.body.scrollHeight;
                 if (h!==this.$store.getters['layout/getBodyHeight']){
                     this.$store.commit('layout/changeBodyHeight',h+50)
                 }
             },
             mouseleave:function () {
+                var collapse = document.getElementsByClassName('sidebar_collapse');
+                if (!collapse.length){
+                    return false;
+                }
                 var height = document.documentElement.clientHeight || document.body.clientHeight;
                 if (height!==this.$store.getters['layout/getBodyHeight']){
                     this.$store.commit('layout/changeBodyHeight',height)
@@ -137,7 +145,7 @@
         cursor: pointer;
     }
     .el-main{
-        padding: 0px;
+        padding: 0px 0px 50px 0px;
         overflow: visible;
     }
     .user-panel{
