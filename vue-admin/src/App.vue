@@ -6,7 +6,8 @@
     export default {
         name: 'App',
         created(){
-
+            var uuid = this.$store.getters['layout/getUUID'];
+            console.log(uuid)
         }
     }
 </script>

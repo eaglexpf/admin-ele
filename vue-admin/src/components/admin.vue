@@ -40,6 +40,7 @@
             // }
         },
         created(){
+            //网页高度自适应
             let self = this;
             window.onresize = function () {
                 var height = document.documentElement.clientHeight || document.body.clientHeight;

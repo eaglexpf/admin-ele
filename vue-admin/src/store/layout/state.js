@@ -1,4 +1,5 @@
 export const state = {
     body_height:0,
-    left_collapse:false
+    left_collapse:false,
+    uuid:undefined,
 }
